@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+
+
+body {
+  margin: 0;
+  background-color: lightgray;
+  font-size: 1.2rem;
+}
+
+.app-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*  this style is applied to app-container only if the browser size become smaller than 600px */
+.app-main {
+  grid-template-columns: 1fr;
+  padding: 1rem;
+ 
+}
+
+/*  this the default app-container styling */
+@media (min-width: 600px) {
+  .app-main {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 20px;
+  }
+}
+
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.switch 
+{
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  border: 1px solid #0C1117;
+  border-radius: 20px;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: lightgray;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+/*  slider ball */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #aeabab;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input:checked + .slider {
+  background-color: #ebebeb;
+  
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: #0c170c;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dark-mode {
+  background-color:#0C1117;
+}
+
+.dark-mode h1{
+  color: white;
+}
+
+.dark-mode 
+.search {
+  background-color: #f9f9f9;
+}
+
+.dark-mode 
+.search input{
+  background-color: #f9f9f9;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #e0dbdb;
+  border: 0.8px solid #c7c1c1;;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 0px 0.8rem 1.5rem 0.8rem;
+}
+
+.search-icon {
+  padding: 10px
+}
+
+.search input {
+  border: none;
+  background-color: #e0dbdb;
+}
+
+.search input:focus{
+  outline: none;
+}
+
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+   minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, 365px);
+    gap: 1rem;
+}
+
+.note-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  min-height: 250px;
+  padding: 0px 20px;
+  border-radius: 8px 8px 20px 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 6px #e5e1ba;
+  cursor: pointer;
+}
+
+.note-item p {
+  overflow: scroll;
+}
+
+.note-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.note-footer {
+  /* background-color: pink; */
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.delete-icon {
+  font-size: 10px;
+  background: transparent;
+  border: none;
+  max-width: fit-content;
+}
+
+.delete-icon:hover  {
+  color: red;
+  cursor: pointer;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 3rem;
+  top: 100px;
+}
+
+textarea, input {
+  border-radius: 5px;
+  border: 1px solid #c7c1c1;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: 'Oxygen', sans-serif;
+  
+}
+textarea {
+  resize: none;
+}
+
+textarea, input:focus {outline:0;}
+
+.note-form button {
+  border-radius: 5px;
+  background-color: #409ab8;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.note-form button:hover {
+  background-color: #3a778d;
+  transition: 0.5s;
+}
+
+.required {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+
+
+
+
+
+
+
