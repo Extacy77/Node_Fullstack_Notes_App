@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Node_Fullstack_Notes_App/static/css/main.f63a86bf.css",
+    "main.js": "/Node_Fullstack_Notes_App/static/js/main.9530245d.js",
+    "static/js/787.7415465b.chunk.js": "/Node_Fullstack_Notes_App/static/js/787.7415465b.chunk.js",
+    "index.html": "/Node_Fullstack_Notes_App/index.html",
+    "main.f63a86bf.css.map": "/Node_Fullstack_Notes_App/static/css/main.f63a86bf.css.map",
+    "main.9530245d.js.map": "/Node_Fullstack_Notes_App/static/js/main.9530245d.js.map",
+    "787.7415465b.chunk.js.map": "/Node_Fullstack_Notes_App/static/js/787.7415465b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f63a86bf.css",
+    "static/js/main.9530245d.js"
+  ]
+}
